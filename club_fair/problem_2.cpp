@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     // Using the XOR approach.
-    int a = 5, b = 8;
+    int a {5}, b {8};
     cout << "a: " << a << ' ' << "b: " << b << '\n';
     a = a ^ b; // The carat "^" is not an exponent, it is the XOR operator.
     b = a ^ b;
