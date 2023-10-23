@@ -10,8 +10,12 @@ int main() {
     // Note: Only works if possible integer values are constrained to some known bound.
     bool flag [64] {};
     for (int value : values) {
-        if (flag[11 - value]) {
-            cout << "Value pair found: " << value << " + " << (11 - value) << " = 11\n";
+        int s {11 - value};
+        if (s < 0) {
+            continue;
+        }
+        if (flag[s]) {
+            cout << "Value pair found: " << value << " + " << s << " = 11\n";
             break;
         } else {
             flag[value] = true;
